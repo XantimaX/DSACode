@@ -30,6 +30,17 @@ void getSection(char section[4][100], char line[100]){
     }
 }
 void main(){
+
+    /*
+    NOTE : FOR POP OPERATION ADD CONDITION
+    if (top == -1) printf("Error")
+
+    Similarly, for PUSH OPERATIOn
+
+    if (top == n) printf("Error")
+    */
+
+    
     char line[100];
     struct studentInfo arr[100];
     FILE* file = fopen("inputfile.txt", "r");
@@ -46,7 +57,8 @@ void main(){
         s.cgpa = atof(sections[3]);
         push(arr,++top,s);
     }
-
+    
+    
     struct studentInfo s = pop(arr,top);
 
 }
